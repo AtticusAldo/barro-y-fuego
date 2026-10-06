@@ -11,7 +11,7 @@ Sitio web de una tienda ficticia de cerámica artesanal. Muestra los productos, 
 - Formspree para el formulario de contacto
 
 ## Sitio publicado
-https://TU-USUARIO.github.io/NOMBRE-DEL-REPO/
+https://atticusaldo.github.io/barro-y-fuego/
 
 ## Autor
 Aldo Álvarez
