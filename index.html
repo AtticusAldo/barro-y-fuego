@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barro y Fuego | Cerámica artesanal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>
+            <img src="img/logo.png" alt="">
+            Barro y Fuego
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#resenas">Reseñas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h2>Cerámica hecha a mano en Buenos Aires</h2>
+            <p>Mates, cazuelas y ollas modelados y horneados en nuestro taller.</p>
+            <img src="img/hero.jpg" alt="Mesa de madera del taller con el mate, la cazuela, la olla y el set matero de barro">
+        </section>
+        <section id="productos">
+            <h2>Productos</h2>
+            <div class="cards">
+                <article class="card">
+                    <div class="card-imagenes">
+                        <img src="img/mate-frente.jpg" alt="Mate de cerámica con la inscripción Barro y Fuego, yerba, bombilla y cuchara de madera">
+                        <img src="img/mate-atras.jpg" alt="Mate de cerámica visto de atrás, con una fogata tallada y la leyenda Hecho en Argentina, edición limitada">
+                    </div>
+                    <h3>Mate Fogón</h3>
+                    <p>Mate de cerámica tallado a mano. Edición limitada.</p>
+                    <span class="precio">$22.000</span>
+                </article>
+                <article class="card">
+                    <div class="card-imagenes">
+                        <img src="img/cazuela-frente.jpg" alt="Cazuela de barro con guiso de lentejas y la inscripción Barro y Fuego">
+                        <img src="img/cazuela-atras.jpg" alt="Cazuela de barro con guiso de lentejas vista por el lado sin inscripción">
+                    </div>
+                    <h3>Cazuela de barro</h3>
+                    <p>Cazuela de barro con asas. Ideal para guisos y comidas al horno.</p>
+                    <span class="precio">$30.000</span>
+                </article>
+                <article class="card">
+                    <div class="card-imagenes">
+                        <img src="img/set-matero-frente.jpg" alt="Set de yerbera y azucarera de barro con tapa, con las inscripciones Yerba y Azúcar, y una cuchara de madera entre ambas">
+                        <img src="img/set-matero-atras.jpg" alt="Yerbera y azucarera de barro vistas por atrás, con una fogata grabada y la leyenda Hecho en Argentina">
+                    </div>
+                    <h3>Set Matero</h3>
+                    <p>Yerbera y azucarera de cerámica con tapa. Se vende en combo.</p>
+                    <span class="precio">$30.000</span>
+                </article>
+                <article class="card">
+                    <div class="card-imagenes">
+                        <img src="img/olla-de-barro-frente.jpg" alt="Olla alta de barro con tapa e inscripción Barro y Fuego">
+                        <img src="img/olla-de-barro-atras.jpg" alt="Olla alta de barro con tapa vista por el lado sin inscripción">
+                    </div>
+                    <h3>Olla de barro con tapa</h3>
+                    <p>Olla alta con tapa. Ideal para guisos, locros y cocciones largas para varias personas. Capacidad de 5 litros.</p>
+                    <span class="precio">$50.000</span>
+                </article>
+            </div>
+        </section>
+        <section id="resenas">
+    <h2>Reseñas</h2>
+    <div class="resenas-grid">
+        <blockquote class="resena destacada">
+            <p>Me regalé el Mate Fogón y es hermoso. Se nota que está tallado a mano, y la fogata del costado es lo que más me gusta. Lo uso todas las mañanas.</p>
+            <cite>Lucía, Palermo</cite>
+        </blockquote>
+        <blockquote class="resena">
+            <p>Hice un guiso de lentejas en la cazuela y quedó espectacular. Mantiene el calor hasta el último plato.</p>
+            <cite>Sofía, Colegiales</cite>
+        </blockquote>
+        <blockquote class="resena">
+            <p>Pedí el Set Matero y lo recibí el mismo día. Las tapas cierran muy bien y la yerba se conserva perfecta.</p>
+            <cite>Andrea, Belgrano</cite>
+        </blockquote>
+        <blockquote class="resena">
+            <p>La olla rinde un montón. Hice locro para seis personas y sobró para el día siguiente.</p>
+            <cite>Ana, Recoleta</cite>
+        </blockquote>
+        <blockquote class="resena">
+            <p>Compré el mate para regalar y la cazuela para mí. Llegaron bien embaladas y las dos son preciosas.</p>
+            <cite>Claudia, Villa Crespo</cite>
+        </blockquote>
+    </div>
+</section>
+        <section id="contacto">
+            <div class="contacto-form">
+                <h2>Contacto</h2>
+                <form action="https://formspree.io/f/mvkzpybe" method="POST">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
+
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+                    <button type="submit">Enviar mensaje</button>
+                </form>
+            </div>
+            <div class="contacto-mapa">
+                <iframe
+                    src="https://www.google.com/maps?q=Buenos+Aires,+Argentina&output=embed"
+                    title="Ubicación del taller en Buenos Aires"
+                    loading="lazy"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Barro y Fuego. Proyecto de curso Front-End.</p>
+    </footer>
+
+</body>
+</html>

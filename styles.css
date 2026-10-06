@@ -1,0 +1,281 @@
+/* ---------- Base ---------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --arcilla: #b5533c;
+    --tierra: #3b2a22;
+    --crema: #f7f0e6;
+    --arena: #e6d5bf;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    color: var(--tierra);
+    background-color: var(--crema);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Caveat', cursive;
+}
+
+/* ---------- Header y navegación ---------- */
+header {
+    background-color: var(--tierra);
+    color: var(--crema);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 2rem;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+header h1 img {
+    height: 64px;
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: var(--crema);
+    text-decoration: none;
+    font-weight: 600;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    border-bottom-color: var(--arcilla);
+}
+
+/* ---------- Secciones ---------- */
+section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+}
+
+section > h2 {
+    font-size: 2.6rem;
+    margin-bottom: 1.5rem;
+}
+
+/* ---------- Inicio (hero con degradado) ---------- */
+#inicio {
+    max-width: none;
+    text-align: center;
+    background: linear-gradient(135deg, var(--arena), #f2c9a8);
+}
+
+#inicio h2 {
+    font-size: 4.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#inicio p {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+
+#inicio img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* ---------- Productos: Flexbox ---------- */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.card {
+    flex: 1 1 400px;
+    background-color: #fff;
+    border: 1px solid var(--arena);
+    border-radius: 8px;
+    overflow: hidden;
+    padding-bottom: 1rem;
+}
+
+.card img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-imagenes {
+    display: flex;
+}
+
+.card-imagenes img {
+    width: 50%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.card h3,
+.card p,
+.card .precio {
+    padding: 0.5rem 1rem 0;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+}
+
+.precio {
+    display: block;
+    font-weight: 600;
+    color: var(--arcilla);
+}
+
+/* ---------- Reseñas: Grid ---------- */
+.resenas-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.resena {
+    background-color: var(--arena);
+    padding: 1.25rem;
+    border-radius: 8px;
+}
+
+.resena cite {
+    display: block;
+    margin-top: 0.75rem;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.resena.destacada {
+    grid-column: span 2;
+    background-color: var(--arcilla);
+    color: #fff;
+}
+
+/* ---------- Contacto ---------- */
+#contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.contacto-form h2 {
+    font-size: 2.6rem;
+    margin-bottom: 1.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+label {
+    font-weight: 600;
+}
+
+input,
+textarea {
+    padding: 0.6rem;
+    border: 1px solid var(--tierra);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+button {
+    margin-top: 0.75rem;
+    padding: 0.75rem;
+    background-color: var(--arcilla);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--tierra);
+}
+
+.contacto-mapa iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    border: 0;
+    border-radius: 8px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    background-color: var(--tierra);
+    color: var(--crema);
+    text-align: center;
+    padding: 1.5rem;
+}
+
+/* ---------- Media Queries ---------- */
+@media (max-width: 800px) {
+    .resenas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #contacto {
+        grid-template-columns: 1fr;
+    }
+
+    #inicio h2 {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .resenas-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resena.destacada {
+        grid-column: span 1;
+    }
+
+    #inicio h2 {
+        font-size: 3rem;
+    }
+}
